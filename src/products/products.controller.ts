@@ -10,6 +10,10 @@ export class ProductsController {
     return this.productService.findAll();
   }
 
+  /**
+   *
+   * @param id
+   */
   @Get('/:id')
   findById(@Param('id') id: number): Promise<Products[]> {
     return this.productService.findById(id);
